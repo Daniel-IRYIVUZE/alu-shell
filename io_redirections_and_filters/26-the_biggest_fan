@@ -1,0 +1,2 @@
+#!/bin/bash
+-rnk 1 | head -n 11 | -f -1 | rev
