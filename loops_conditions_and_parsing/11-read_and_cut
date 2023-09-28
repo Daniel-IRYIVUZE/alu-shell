@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This is a Bash script that displays the content of the file /etc/passwd and display username,user id and home directory path for the user by using while loop
+if [ ! -f /etc/passwd ]; 
+then
+echo "File /etc/passwd does not exist."
+exit 1
+fi
+while IFS=: read -r username _ userid _ _ homedir _;
+do
+echo "Username: $username"
+echo "User ID: $userid"
+echo "Home Directory: $homedir"
+done < /etc/passwd
