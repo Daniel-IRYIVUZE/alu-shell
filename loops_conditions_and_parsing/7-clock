@@ -9,4 +9,4 @@ echo "$minute"
 minute=$[$minute + 1]
 done
 hour=$[$hour + 1]
-done 
+done | head -n 4000 
